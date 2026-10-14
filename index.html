@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Search Console Verification Meta Tag -->
+    <meta name="google-site-verification" content="6RcjxNl5nk9GnDZeqQjgtP0KCn9tt_phFxU5mbAHsFM" />
+    <title>Vortex: File Manager — Official Website & Privacy Policy</title>
+    <meta name="description" content="Official home page for Vortex: File Manager (Vortex: File Server & Client) Android app. Features local servers, cloud integrations including Google Drive, and secure file transfer.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --card-border: #1e293b;
+            --accent-cyan: #00f0ff;
+            --accent-teal: #10b981;
+            --accent-blue: #3b82f6;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --section-bg: #0f172a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(180deg, #131d33 0%, #0b0f19 100%);
+            border-bottom: 1px solid var(--card-border);
+            padding: 2.5rem 1.5rem 3.5rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 240, 255, 0.1);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 9999px;
+            padding: 0.35rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        h1 span {
+            color: var(--accent-cyan);
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: #e2e8f0;
+            background: rgba(19, 27, 46, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+            background: rgba(0, 240, 255, 0.12);
+            border-color: rgba(0, 240, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 14px rgba(0, 240, 255, 0.2);
+        }
+
+        .nav-links a:active {
+            transform: translateY(0);
+            background: rgba(0, 240, 255, 0.2);
+        }
+
+        section {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: #ffffff;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 240, 255, 0.4);
+        }
+
+        .card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Google Drive Specific Section */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .scope-badge {
+            display: inline-block;
+            background: #1e293b;
+            color: #38bdf8;
+            font-family: monospace;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin: 0.25rem 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-muted);
+        }
+
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-teal);
+            font-weight: bold;
+        }
+
+        /* Policy Text Format */
+        .policy-container {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .policy-container h3 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.5rem;
+            color: var(--accent-cyan);
+        }
+
+        .policy-container p, .policy-container li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        footer {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            background: #070a12;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <span class="badge">Official Application Website</span>
+            <h1>Vortex: <span>File Manager</span></h1>
+            <p class="tagline">High-performance local network file server hub, client explorer, and multi-cloud storage manager for Android.</p>
+            <div class="nav-links">
+                <a href="#features">⚡ Features</a>
+                <a href="#google-drive">☁️ Google Drive</a>
+                <a href="#privacy">🛡️ Privacy Policy</a>
+                <a href="#terms">📜 Terms of Service</a>
+                <a href="#contact">✉️ Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- FEATURES SECTION -->
+        <section id="features">
+            <h2>⚡ Key Features</h2>
+            <p style="color: var(--text-muted);">Vortex combines a full-featured Android file manager with advanced local network server protocols and direct cloud storage integrations.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <span class="card-icon">📁</span>
+                    <h3>Local File Explorer</h3>
+                    <p>Clean, futuristic file browser supporting storage analysis, batch zip/unzip operations, file indexing, and fast search.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">📡</span>
+                    <h3>Local File Server Hub</h3>
+                    <p>Host files straight from your device using local FTP, SFTP, WebDAV, DLNA / UPnP Media Streaming, and browser-based Vortex Beam HTTP.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">☁️</span>
+                    <h3>Cloud Storage Management</h3>
+                    <p>Connect directly to your cloud drives (Google Drive, Dropbox, pCloud) with seamless file transfers and no intermediary servers.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Near-Drop Wireless Transfer</h3>
+                    <p>High-speed peer-to-peer (P2P) file transfers over Wi-Fi Direct and local hotspot without consuming internet data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GOOGLE DRIVE INTEGRATION & DISCLOSURE -->
+        <section id="google-drive">
+            <h2>☁️ Google Drive Integration & Scopes Disclosure</h2>
+            <p style="color: var(--text-muted);">In compliance with Google API Services User Data Policy, below is the transparent disclosure of how Vortex interacts with Google Drive.</p>
+
+            <div class="highlight-box">
+                <h3>Requested OAuth 2.0 Scope</h3>
+                <p><span class="scope-badge">https://www.googleapis.com/auth/drive</span></p>
+                <p style="margin-top: 0.5rem; color: var(--text-muted);"><strong>Why Vortex requests this scope:</strong> Vortex: File Manager is a full-featured Android file browser and local network server application. This permission is requested exclusively to enable the following user-initiated actions:</p>
+                <ul style="margin-top: 0.75rem;">
+                    <li>Allowing users to browse their personal Google Drive folders and files inside the app's unified explorer interface.</li>
+                    <li>Allowing users to download and transfer files directly between local device storage and their Google Drive.</li>
+                    <li>Allowing users to upload selected files and create folders directly in their Google Drive account.</li>
+                    <li>Allowing users to stream audio/video files directly from Google Drive to the built-in media player.</li>
+                    <li>Allowing users to export Google Workspace documents (Docs, Sheets, Slides) into standard offline files (DOCX, XLSX, PPTX, PDF).</li>
+                </ul>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h3>📥 Data Access Disclosure</h3>
+                    <p>Vortex accesses only user account email (for account labeling), file/folder metadata (names, IDs, sizes, MIME types, modification dates), and the binary content of specific files explicitly chosen for upload, download, or streaming.</p>
+                </div>
+                <div class="card">
+                    <h3>⚙️ Data Use Disclosure</h3>
+                    <p>User data is used strictly for user-facing file manager functions. Google user data is never used for advertising, marketing, analytics, profiling, or training artificial intelligence models.</p>
+                </div>
+                <div class="card">
+                    <h3>🛡️ Data Protection Disclosure</h3>
+                    <p>All Google OAuth credentials and tokens are encrypted at rest using AES-256 GCM encryption via Android Keystore (<code>EncryptedSharedPreferences</code>). All transmissions are encrypted in transit via direct HTTPS/TLS connections with official Google API servers.</p>
+                </div>
+                <div class="card">
+                    <h3>🗑️ Data Retention & Deletion</h3>
+                    <p>Cached metadata and credentials remain solely on the device. Tapping "Disconnect" immediately and permanently wipes all OAuth tokens and caches. Users can revoke access anytime at <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">Google Account Permissions</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRIVACY POLICY SECTION -->
+        <section id="privacy">
+            <h2>🛡️ Privacy Policy</h2>
+            <p style="color: var(--text-muted);">Last updated: October 14, 2026 | Developer: <strong>Ilham Sugiri (Indonesia)</strong></p>
+
+            <div class="policy-container">
+                <p>For the full comprehensive policy, please visit our standalone <a href="privacy.html" style="color: var(--accent-cyan); font-weight: 600;">Official Privacy Policy Page (privacy.html)</a>.</p>
+
+                <h3>1. Overview & Core Principles</h3>
+                <p><strong>Vortex: File Manager</strong> (Package: <code>com.vortex.filemanager</code>) is dedicated to protecting your privacy. We believe your files and data belong entirely to you.</p>
+
+                <h3>2. Zero Data Collection & Analytics</h3>
+                <p><strong>Vortex does NOT collect, harvest, transmit, or sell any personal data.</strong></p>
+                <ul>
+                    <li>❌ No third-party advertising SDKs (100% ad-free).</li>
+                    <li>❌ No telemetry or tracking analytics (no Firebase Analytics, Google Analytics, or third-party trackers).</li>
+                    <li>❌ No user accounts or registrations required.</li>
+                    <li>❌ No remote server relays (all servers and transfers operate strictly local or direct P2P).</li>
+                </ul>
+
+                <h3>3. Google API Services User Data Policy Compliance</h3>
+                <p>Vortex's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">Google API Services User Data Policy</a>, including the Limited Use requirements. All credentials and file metadata are handled on-device with hardware-backed AES-256 encryption.</p>
+
+                <h3>4. Device Permissions Justification</h3>
+                <ul>
+                    <li><strong><code>MANAGE_EXTERNAL_STORAGE</code>:</strong> Required to browse, organize, host, and transfer files across internal memory and SD cards.</li>
+                    <li><strong><code>INTERNET</code> & <code>ACCESS_NETWORK_STATE</code>:</strong> Required to operate local network servers (FTP, SFTP, WebDAV, DLNA), perform local network speed tests, and communicate with official cloud APIs.</li>
+                    <li><strong><code>NEARBY_WIFI_DEVICES</code> & <code>ACCESS_FINE_LOCATION</code>:</strong> Required by Android OS solely for Wi-Fi Direct peer discovery in Near-Drop transfers. Physical GPS location is never tracked or logged.</li>
+                    <li><strong><code>FOREGROUND_SERVICE</code>:</strong> Keeps background file transfers and local file server hosting active when the app is minimized.</li>
+                </ul>
+
+                <h3>5. Contact for Privacy Inquiries</h3>
+                <p>For any questions or concerns regarding this Privacy Policy, please contact developer Ilham Sugiri at <a href="mailto:ilham.piranha08@gmail.com" style="color: var(--accent-cyan);">ilham.piranha08@gmail.com</a>.</p>
+            </div>
+        </section>
+
+        <!-- TERMS OF SERVICE -->
+        <section id="terms">
+            <h2>📜 Terms of Service</h2>
+            <div class="policy-container">
+                <p>By downloading or using <strong>Vortex: File Manager</strong>, you agree to these Terms of Service:</p>
+                <ul>
+                    <li><strong>Personal Use:</strong> Vortex is provided for personal, educational, and professional file management and network hosting purposes.</li>
+                    <li><strong>User Responsibility:</strong> You are solely responsible for the files you choose to host, transfer, or store using Vortex. Do not use the application to distribute copyright-infringing or illegal materials.</li>
+                    <li><strong>Disclaimer:</strong> Vortex is provided "AS IS" without warranties of any kind. The developer is not liable for data loss resulting from device malfunction, network disconnection, or user error.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+            <h2>📬 Contact & Developer Information</h2>
+            <div class="card" style="margin-top: 1rem;">
+                <p><strong>Application Name:</strong> Vortex: File Manager (Vortex: File Server & Client)</p>
+                <p><strong>Developer:</strong> Ilham Sugiri</p>
+                <p><strong>Email:</strong> <a href="mailto:ilham.piranha08@gmail.com" style="color: var(--accent-cyan);">ilham.piranha08@gmail.com</a></p>
+                <p><strong>Country:</strong> Indonesia</p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/ilhampiranha08-tech" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">https://github.com/ilhampiranha08-tech</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vortex: File Manager. Developed by Ilham Sugiri. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
